@@ -1,0 +1,158 @@
+.intro {
+    margin-top: 10rem;
+}
+
+video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -10;
+    opacity: 0.4;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.intro .container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 5rem;
+}
+
+.box-cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: 35vw;
+    
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 4.5rem;
+}
+
+h3 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.box-cta p {
+    font-size: 1.9rem;
+    margin: 4rem 0;
+    text-align: center;
+}
+
+h1 span {
+    background: linear-gradient(to right, #07c8f9ff, #09a6f3ff, #0a85edff, #0c63e7ff, #0d41e1ff);
+    background-clip: text;
+    color: transparent;
+}
+
+.item {
+    display: block;
+    position: relative;
+    border-radius: 2rem;
+    background-color: #131A25;
+    z-index: 0.9;
+}
+
+.item::after, .item::before {
+    content: '';
+    position: absolute;
+    top: -0.1rem;
+    left: -0.1rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    padding: 0.1rem;
+    background-image: conic-gradient(from var(--angle), transparent 0%, #0d41e1ff, #0a85edff);
+    z-index: -1;
+    animation: var(--animation-duration, 10s) spin linear infinite;
+}
+
+.item::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+
+.item p {
+    padding: 0;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+
+@media (max-width: 768px) {
+   .video-overlay {
+        position: absolute;
+        bottom: -1rem;
+        left: 0;
+        width: 100%;
+        height: 10%;
+        background: linear-gradient(to bottom, #131a2518, #030711);
+        z-index: -5;
+    }
+    .intro .container {
+        position: relative;
+        z-index: 0.5;
+        margin: 17.5rem auto;
+        gap: 20rem;
+    }
+
+    .box-cta {
+        width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 3rem;
+    }
+
+    .item {
+        background-color: #131a25;
+    }
+
+    .item::after, .item::before {
+        background-image: conic-gradient(from var(--angle), transparent 0%, rgba(13, 66, 225, 0.4), rgba(10, 135, 237, 0.4));
+    }
+
+   }
