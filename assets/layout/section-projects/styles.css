@@ -1,0 +1,193 @@
+.intro {
+    margin-top: 5rem;
+}
+
+video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -10;
+    opacity: 0.4;
+}
+
+.video-overlay {
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(to bottom, #131a2518, #030711);
+    z-index: -5;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.intro .container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 5rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+    height: auto;
+    gap: 5rem;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    min-height: 55rem;
+    gap: 3rem;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 7.5rem;
+}
+
+.item {
+    width: 40rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 5rem;
+}
+
+.content {
+    background: rgba(9, 165, 243, 0.13);
+    backdrop-filter: blur(20px);
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    min-height: 14rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.content p {
+    font-size: 1.2rem;
+}
+
+.content-img {
+    width: 100%;
+    height: 35rem;
+    border-radius: 5rem;
+    background: rgba(9, 165, 243, 0.13);
+    backdrop-filter: blur(20px);
+}
+
+.content-img a::after, .content-img a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+    background-image: conic-gradient(from var(--angle), transparent 0%, #0d41e1ff, #0a85edff);
+    z-index: -1;
+    opacity: 0;
+    filter: blur(25px);
+    animation: var(--animation-duration, 10s) spin linear infinite;
+    transition: opacity .5s ease-in-out;
+}
+
+.content-img a:hover::after, .content-img a:hover::before {
+    opacity: 1;
+}
+
+.content-img a {
+    cursor: pointer;
+}
+
+.content-img img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 5rem;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 4.5rem;
+}
+
+h1 span {
+    background: linear-gradient(to right, #07c8f9ff, #09a6f3ff, #0a85edff, #0c63e7ff, #0d41e1ff);
+    background-clip: text;
+    color: transparent;
+}
+
+h3 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+    margin: 1rem auto;
+}
+
+@media (max-width: 1024px) {
+
+    .intro {
+        width: 85%;
+        margin: auto;
+    }
+
+    h1 {
+        margin-top: 5rem;
+        font-size: 3.5rem;
+    }
+
+    .cards {
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .content {
+        margin: auto 1rem;
+        height: 16rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .item {
+        margin-bottom: 3rem;
+        
+    }
+    
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}

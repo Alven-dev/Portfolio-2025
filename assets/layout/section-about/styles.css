@@ -227,7 +227,17 @@ h2 {
 .cvs a:hover::after, .cvs a:hover::before {
     opacity: 1;
 }
+@media (max-width: 1520px) {
+    .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .card, .card-big {
+        width: 100%;
+    }
+}
 
 @media (max-width: 1024px) {
 
