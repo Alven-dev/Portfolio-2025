@@ -72,7 +72,7 @@ video {
 }
 
 .content {
-    background: rgba(9, 165, 243, 0.13);
+    background: rgba(255, 255, 255, 0.055);
     backdrop-filter: blur(20px);
     padding: 1rem;
     border-radius: 1rem;
@@ -92,6 +92,7 @@ video {
     border-radius: 5rem;
     background: rgba(9, 165, 243, 0.13);
     backdrop-filter: blur(20px);
+    border: 0.2rem outset rgba(12, 99, 231, 0.8);
 }
 
 .content-img a::after, .content-img a::before {
@@ -123,6 +124,7 @@ width: 100%;
 height: 100%;
 object-fit: cover;
 border-radius: 5rem;
+opacity: 1;
 }
 
 h1 {
