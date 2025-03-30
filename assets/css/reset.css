@@ -23,3 +23,8 @@ body {
 main {
     flex: 1;
 }
+
+.menu-link a {
+    height: 10rem;
+    padding-top: 3rem;
+}
