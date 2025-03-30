@@ -1,0 +1,123 @@
+.intro {
+    margin-top: 5rem;
+}
+
+video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -10;
+    opacity: 0.4;
+}
+
+.video-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(to bottom, #131a2518, #030711);
+    z-index: -5;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.intro .container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 5rem;
+}
+
+#toast {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10, 135, 237, 0.164);
+    backdrop-filter: blur(5rem);
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 100;
+    font-size: 2rem;
+  }
+  .show {
+    opacity: 1;
+    display: block;
+  }
+
+  .hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.contact-options {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 10rem;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 4.5rem;
+}
+
+h1 span {
+    background: linear-gradient(to right, #07c8f9ff, #09a6f3ff, #0a85edff, #0c63e7ff, #0d41e1ff);
+    background-clip: text;
+    color: transparent;
+}
+
+.title {
+    display: block;
+    width: 80%;
+    text-align: center;
+    margin: 5rem auto;
+    margin-top: 20rem;
+}
+
+.gradient-button {
+    padding: 1.2rem 2.4rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 2.5rem;
+    background: linear-gradient(90deg, #07c8f9ff, #09a6f3ff, #0a85edff, #0c63e7ff, #0d41e1ff);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+    width: 26rem;
+}
+
+  .gradient-button:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+  
+@media (max-width: 1024px) {
+    .contact-options {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5rem;
+        margin-top: 5rem;
+    }
+}

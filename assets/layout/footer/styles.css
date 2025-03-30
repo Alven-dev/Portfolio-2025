@@ -56,8 +56,18 @@ footer::before {
     transition: 0.4s;
 }
 
+#discord {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+#discord:hover {
+    transform: scale(1.2);
+    transition: 0.4s;
+}
 
-@media (max-width: 768px) {
+
+@media (max-width: 1024px) {
     .desktop {
         display: none !important;
     }
@@ -76,7 +86,7 @@ footer::before {
 }
 
 
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
     .mobile {
         display: none !important;
     }

@@ -98,6 +98,30 @@ h1 span {
     opacity: 0.5;
 }
 
+#toast {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10, 135, 237, 0.164);
+    backdrop-filter: blur(5rem);
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 100;
+    font-size: 2rem;
+  }
+  .show {
+    opacity: 1;
+    display: block;
+  }
+
+  .hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
 @keyframes spin {
     from {
         --angle: 0deg;
@@ -121,7 +145,7 @@ h1 span {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
    .video-overlay {
         position: absolute;
         bottom: -1rem;
