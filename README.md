@@ -8,6 +8,6 @@ Fully developped portfolio website.
 - CSS
 - JavaScript
 - GSAP
-- 
+  
 ## Author
 Mikołaj Lorek
