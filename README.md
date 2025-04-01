@@ -1,2 +1,13 @@
 # Portfolio-2025
-My Portfolio Website | Pure HTML, CSS and JavaScript.
+Fully developped portfolio website.
+
+## Demo online
+👉 https://alven.dev/
+## Techstack
+- HTML
+- CSS
+- JavaScript
+- GSAP
+- 
+## Author
+Mikołaj Lorek
